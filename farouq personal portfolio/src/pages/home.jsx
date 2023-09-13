@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import linkedinProfilePic from '../assets/linkedin profile pic.jpg';
+import "../index.css"
 
 const Home = () => {
   const [fadeInImage, setFadeInImage] = useState(false);
@@ -33,7 +34,7 @@ const Home = () => {
                 excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
                 a id nisi.
               </p>
-              <button className={`btn btn-primary transition-opacity duration-1000 ${fadeInButton ? 'opacity-100' : 'opacity-0'}`}>Get Started</button>
+              <button className={`btn btn-secondary transition-opacity duration-1000 ${fadeInButton ? 'opacity-100' : 'opacity-0'}`}>Get Started</button>
             </div>
           </div>
           <div className={`w-96 h-96 mx-auto mt-4 rounded-3xl overflow-hidden transition-opacity duration-1000 ${fadeInImage ? 'opacity-100' : 'opacity-0'}`}>

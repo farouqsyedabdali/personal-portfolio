@@ -1,52 +1,87 @@
-import React, { useEffect, useState } from 'react';
-import linkedinProfilePic from '../assets/linkedin profile pic.jpg';
+import React from "react";
+import { FaMapSigns } from "react-icons/fa";
+import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
+import { FaPaperPlane } from "react-icons/fa";
 
-const Home = () => {
-  const [fadeInImage, setFadeInImage] = useState(false);
-  const [fadeInH1, setFadeInH1] = useState(false);
-  const [fadeInP, setFadeInP] = useState(false);
-  const [fadeInButton, setFadeInButton] = useState(false);
-
-  useEffect(() => {
-    const timeoutIdImage = setTimeout(() => setFadeInImage(true), 250); // Adjust the delay as needed
-    const timeoutIdH1 = setTimeout(() => setFadeInH1(true), 500); // Adjust the delay as needed
-    const timeoutIdP = setTimeout(() => setFadeInP(true), 1000); // Adjust the delay as needed
-    const timeoutIdButton = setTimeout(() => setFadeInButton(true), 1500); // Adjust the delay as needed
-    
-    return () => {
-      clearTimeout(timeoutIdImage);
-      clearTimeout(timeoutIdH1);
-      clearTimeout(timeoutIdP);
-      clearTimeout(timeoutIdButton);
-    };
-  }, []);
+const Contact = () => {
+  const formTab = [{ name: "" }, { name: "" }, { name: "" }, { name: "" }];
+  const contactTab = [
+    {
+      icon: <FaMapSigns className="text-4xl" />,
+      title: "Address",
+      desription: `198 West 21th Street, Suite 721 New York NY 10016`,
+    },
+    {
+      icon: <BsFillTelephoneFill className="text-4xl" />,
+      title: "Contact Number",
+      desription: `+ 1235 2355 98`,
+    },
+    {
+      icon: <FaPaperPlane className="text-4xl" />,
+      title: "Email Address",
+      desription: `info@yoursite.com`,
+    }
+  ];
 
   return (
-    <div className={`hero min-h-screen bg-base-200`}>
-      <div className="hero-content">
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2">
-            <div className="max-w-md mx-auto">
-              <h1 className={`text-5xl font-bold transition-opacity duration-1000 ${fadeInH1 ? 'opacity-100' : 'opacity-0'}`}>Hello there</h1>
-              <p className={`py-6 transition-opacity duration-1000 ${fadeInP ? 'opacity-100' : 'opacity-0'}`}>
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-                a id nisi.
-              </p>
-              <button className={`btn btn-primary transition-opacity duration-1000 ${fadeInButton ? 'opacity-100' : 'opacity-0'}`}>Get Started</button>
-            </div>
+    <>
+      <div>
+        <div className="md:w-96 mx-auto text-center my-24">
+          <div className="text-2xl font-bold">Contact Me</div>
+          <div className="text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis dolorem sint, magni magnam impedit dignissimos rerum
+            modi error ex libero corrupti ab, numquam, eius maxime! Soluta quos
+            culpa possimus tempora.
           </div>
-          <div className={`w-96 h-96 mx-auto mt-4 rounded-3xl overflow-hidden transition-opacity duration-1000 ${fadeInImage ? 'opacity-100' : 'opacity-0'}`}>
-            <img
-              src={linkedinProfilePic}
-              alt="LinkedIn Profile Pic"
-              className="w-full h-full object-cover"
-            />
+        </div>
+
+        <div className="container mx-auto my-12 h-auto">
+          <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
+            {contactTab.map((x, index) => {
+              return (
+                <div key={index} className="card w-full  shadow-xl h-auto ">
+                  <div className="card-body items-center flex-grow-0  text-center">
+                    <h2 className="card-title">{x.icon}</h2>
+                    <p className="text-lg font-bold my-3">{x.title}</p>
+                    <div className="">
+                      <p className=" text-lg font-semibold">{x.desription}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </div>
+
+      <div className=" container mx-auto flex justify-center my-20">
+        <div className="lg:w-1/2 w-full p-4">
+          <form className="shadow-md rounded-lg px-2 pt-6 pb-8 mb-4">
+            <div className="flex flex-col">
+              {formTab.map((x, index) => {
+                return (
+                  <div key={index} className="mx-auto form-control w-full">
+                    <label className="label">
+                      <span className="label-text">What is your name?</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Type here"
+                      className="input input-bordered w-full"
+                    />
+                  </div>
+                );
+              })}
+              <div className="w-full my-4 flex justify-center">
+                <button className="btn rounded-full w-full">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default Home;
+export default Contact;
