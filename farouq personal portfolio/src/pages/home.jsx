@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={`hero min-h-screen bg-base-200`}>
+    <div className={`hero min-h-screen bg-base-200 `}>
       <div className="hero-content">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2">
