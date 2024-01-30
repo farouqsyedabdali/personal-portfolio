@@ -1,16 +1,5 @@
-/* Add this CSS to your stylesheet */
 .navbar-end .btn {
   margin-right: 10px; /* Adjust the margin as needed */
-}
-
-[data-theme='light'] {
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
-  color: hsl(var(--bc) / var(--tw-text-opacity, 1));
-}
-
-[data-theme='dark'] {
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
-  color: hsl(var(--bc) / var(--tw-text-opacity, 1));
 }
 
 body {

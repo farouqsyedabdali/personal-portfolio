@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   transition: background-color 0.5s, color 0.5s;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: 'Orbitron', sans-serif;
 }
+
+/*
+#spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x) var(--y), rgba(240,240,240,0.1), #232530 80%);
+  z-index: 0;
+}
+*/
