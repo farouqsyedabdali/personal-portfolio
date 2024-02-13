@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://farouqsyedabdali.github.io/personal-portfolio/farouq%20personal%20portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
