@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import linkedinProfilePic from "../assets/linkedin profile pic.jpg";
 import "../index.css";
-import Card from "../components/card";
 import Resume from "../assets/Farouq_Tech_Resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Projects from "./projects";
+import About from "./about";
 
 const Home = () => {
   const [fadeInImage, setFadeInImage] = useState(false);
@@ -12,7 +13,7 @@ const Home = () => {
   const [fadeInButton, setFadeInButton] = useState(false);
   const [fadeInButton2, setFadeInButton2] = useState(false);
 
-  const navbarHeight = 64; // Replace with the actual height of your navbar
+  const navbarHeight = 50; // Replace with the actual height of your navbar
 
   const scrollToElement = (elementId) => {
     const element = document.getElementById(elementId);
@@ -102,7 +103,7 @@ const Home = () => {
                   Open Resume
                 </button>
                 <div>
-                  <h1 className="m-12">
+                  <h1 className="mt-12">
                     I'm a
                     <span className="font-bold text-green-500">{text}</span>
                     <Cursor />
@@ -125,37 +126,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div id="projects" className="text-center mb-12">
-          <h1 className="text-4xl font-bold">My Projects</h1>
-          <p className="text-lg text-gray-600 mt-4">
-            Explore some of the projects I've worked on.
-          </p>
-        </div>
-
-        {/* Grid Container */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {/* Card 1 */}
-          <Card
-            title={"Farouq's Shoe"}
-            description={"This is a test"}
-            image={linkedinProfilePic}
-            link={"https://www.google.com/"}
-          />
-          {/* Card 2 */}
-          <Card
-            image={
-              "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            }
-          />
-          {/* Card 3 */}
-          <Card />
-          {/* Card 4 */}
-          <Card />
-          {/* Card 5 */}
-          <Card />
-        </div>
-      </div>
+      <Projects />
+      <About />
     </>
   );
 };
