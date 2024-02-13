@@ -9,7 +9,7 @@ document.documentElement.setAttribute('data-theme', savedTheme);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename='/personal-portfolio/farouq%20personal%20portfolio'>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
