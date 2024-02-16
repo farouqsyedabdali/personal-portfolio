@@ -23,13 +23,13 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-200 z-1">
       <div className="navbar-start z-10">
-        <a href="/" className="btn btn-ghost normal-case text-xl">
+        <a href="/personal-portfolio" className="btn btn-ghost normal-case text-xl">
           <img src={softeng} alt="Software Engineer" className="w-12 h-12 inline-block" />
           Farouq Syed Abdali
         </a>
       </div>
       <div className="navbar-end z-10">
-        <a href="/" className="btn btn-primary">
+        <a href="/personal-portfolio" className="btn btn-primary">
           Placeholder
         </a>
         <label className="swap swap-rotate">
