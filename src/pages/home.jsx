@@ -5,6 +5,7 @@ import Resume from "../assets/Farouq_Tech_Resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Projects from "./projects";
 import About from "./about";
+import Contact from "./contact";
 
 const Home = () => {
   const [fadeInImage, setFadeInImage] = useState(false);
@@ -128,6 +129,7 @@ const Home = () => {
       </div>
       <Projects />
       <About />
+      <Contact />
     </>
   );
 };

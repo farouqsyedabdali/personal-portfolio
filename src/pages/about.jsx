@@ -1,37 +1,32 @@
 import React from 'react';
+import { FaUniversity, FaCode, FaRobot, FaHeart, FaJava, FaJsSquare, FaReact, FaNodeJs } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <div>
-      <div className="max-w-5xl mx-auto px-4 py-12">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-4">About Me</h1>
-          <p className="text-xl text-gray-700 mb-8">
-            Welcome to my personal space. Let's dive into who I am!
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-6">About Me</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Passionate about blending technology with creativity to solve complex challenges.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 className="text-2xl font-bold mb-4 flex items-center"><FaUniversity className="mr-2" />My Journey</h2>
+          <p className="text-lg text-gray-600">
+            As a Software Engineering student at Carleton University, I'm deeply engaged in transforming ideas into reality through coding and robotics, exploring new technologies, and building projects that matter.
           </p>
         </div>
-        
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Biography</h2>
-            <p className="text-lg text-gray-700">
-              Tell the story of who you are, where you come from, and what you are doing now. Include any education or experiences that define you.
-            </p>
-          </div>
 
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Skills & Hobbies</h2>
-            <p className="text-lg text-gray-700">
-              Detail your skills and hobbies. Mention the things you are good at and what you enjoy doing in your spare time.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Contact</h2>
-            <p className="text-lg text-gray-700">
-              Let people know how they can reach you. You might include an email address, phone number, or links to your social media profiles here.
-            </p>
-          </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-4 flex items-center"><FaCode className="mr-2" />My Skills</h2>
+          <ul className="list-none space-y-2">
+            <li className="flex items-center text-lg text-gray-600"><FaJava className="text-orange-500 mr-2" size={32}/>Java - Backend development and algorithms</li>
+            <li className="flex items-center text-lg text-gray-600"><FaJsSquare className="text-yellow-500 mr-2" size={32}/>JavaScript - Frontend magic and interactive web applications</li>
+            <li className="flex items-center text-lg text-gray-600"><FaReact className="text-blue-500 mr-2" size={32}/>React - Seamless user interfaces and user experiences</li>
+            <li className="flex items-center text-lg text-gray-600"><FaNodeJs className="text-green-500 mr-2" size={32}/>Node.js - Scalable backend services and APIs</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -1,86 +1,110 @@
-import React from "react";
-import { FaMapSigns } from "react-icons/fa";
-import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
-import { FaPaperPlane } from "react-icons/fa";
+import React, { useState } from "react";
+import { MdEmail, MdPhone } from "react-icons/md"; // Icons for email and phone
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Icons for GitHub and LinkedIn
 
 const Contact = () => {
-  const formTab = [{ name: "" }, { name: "" }, { name: "" }, { name: "" }];
-  const contactTab = [
-    {
-      icon: <FaMapSigns className="text-4xl" />,
-      title: "Address",
-      desription: `198 West 21th Street, Suite 721 New York NY 10016`,
-    },
-    {
-      icon: <BsFillTelephoneFill className="text-4xl" />,
-      title: "Contact Number",
-      desription: `+ 1235 2355 98`,
-    },
-    {
-      icon: <FaPaperPlane className="text-4xl" />,
-      title: "Email Address",
-      desription: `info@yoursite.com`,
-    }
-  ];
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle the form submission
+    const mailtoLink = `mailto:farouqsyedabdali@gmail.com?subject=Website Email: from ${encodeURIComponent(
+      formData.email
+    )}&body=${encodeURIComponent(formData.message)}`;
+
+    // Open the mailto link in a new tab/window
+    window.open(mailtoLink, "_blank");
+  };
 
   return (
-    <>
-      <div>
-        <div className="md:w-96 mx-auto text-center my-24">
-          <div className="text-2xl font-bold">Contact Me</div>
-          <div className="text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis dolorem sint, magni magnam impedit dignissimos rerum
-            modi error ex libero corrupti ab, numquam, eius maxime! Soluta quos
-            culpa possimus tempora.
-          </div>
-        </div>
-
-        <div className="container mx-auto my-12 h-auto">
-          <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
-            {contactTab.map((x, index) => {
-              return (
-                <div key={index} className="card w-full  shadow-xl h-auto ">
-                  <div className="card-body items-center flex-grow-0  text-center">
-                    <h2 className="card-title">{x.icon}</h2>
-                    <p className="text-lg font-bold my-3">{x.title}</p>
-                    <div className="">
-                      <p className=" text-lg font-semibold">{x.desription}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+    <div className="bg-base-300">
+      <div className="container mx-auto px-4 py-10 flex justify-center">
+        <h2 className="text-4xl font-bold text-center mb-6">Contact Me</h2>
       </div>
+      <div className="container mx-auto px-4 py-10 flex">
+        <div className="w-1/2 space-y-4">
+          <a
+            href="mailto:farouqsyedabdali@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg inline-flex items-center"
+          >
+            <MdEmail className="mr-2" size={24} />
+            farouqsyedabdali@gmail.com
+          </a>
+          <p className="text-lg flex items-center">
+            <MdPhone className="mr-2" size={24} />
+            416-871-8834
+          </p>
+          <a
+            href="https://github.com/farouqsyedabdali"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg inline-flex items-center"
+          >
+            <FaGithub className="mr-2" size={24} />
+            github.com/farouqsyedabdali
+          </a>
+          <a
+            href="https://www.linkedin.com/in/farouq-syed-abdali/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg inline-flex items-center"
+          >
+            <FaLinkedin className="mr-2" size={24} />
+            linkedin.com/in/farouq-syed-abdali
+          </a>
+        </div>
 
-      <div className=" container mx-auto flex justify-center my-20">
-        <div className="lg:w-1/2 w-full p-4">
-          <form className="shadow-md rounded-lg px-2 pt-6 pb-8 mb-4">
-            <div className="flex flex-col">
-              {formTab.map((x, index) => {
-                return (
-                  <div key={index} className="mx-auto form-control w-full">
-                    <label className="label">
-                      <span className="label-text">What is your name?</span>
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </div>
-                );
-              })}
-              <div className="w-full my-4 flex justify-center">
-                <button className="btn rounded-full w-full">Send Message</button>
-              </div>
+        <div className="w-1/2 ml-10">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input input-bordered w-full"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="input input-bordered w-full"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Message"
+                className="textarea textarea-bordered w-full h-32"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
             </div>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
