@@ -6,6 +6,8 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Projects from "./projects";
 import About from "./about";
 import Contact from "./contact";
+import WaterDropGrid from "../components/waterDropGrid";
+import Testing from "./testing";
 
 const Home = () => {
   const [fadeInImage, setFadeInImage] = useState(false);
@@ -67,9 +69,10 @@ const Home = () => {
 
   return (
     <>
-      <div id="spotlight"></div>
-      <div className={`hero min-h-screen bg-base-200 `}>
-        <div className="hero-content">
+      <div className={`hero min-h-screen bg-base-200 relative`}>
+        <div className="hero-content z-10 relative">
+          {" "}
+          {/* Ensure content is above the background */}
           <div className="flex flex-col lg:flex-row">
             <div className="lg:w-1/2">
               <div className="max-w-md mx-auto">
@@ -103,6 +106,7 @@ const Home = () => {
                 >
                   Open Resume
                 </button>
+                {/*}
                 <div>
                   <h1 className="mt-12">
                     I'm a
@@ -110,6 +114,7 @@ const Home = () => {
                     <Cursor />
                   </h1>
                 </div>
+                */}
               </div>
             </div>
             <div
@@ -127,6 +132,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       <Projects />
       <About />
       <Contact />

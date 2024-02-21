@@ -1,11 +1,22 @@
 import React from "react";
 import linkedinProfilePic from "../assets/linkedin profile pic.jpg";
 import Card from "../components/card";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const Projects = () => {
+  const [setRef, isVisible] = useIntersectionObserver({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  });
+
   return (
-    <div className="bg-base-300">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="bg-base-300 z-10" ref={setRef}>
+      <div
+        className={`max-w-7xl mx-auto px-4 py-12 transition-opacity duration-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div id="projects" className="text-center mb-12">
           <h1 className="text-4xl font-bold">My Projects</h1>
           <p className="text-lg text-gray-600 mt-4">

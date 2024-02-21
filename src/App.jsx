@@ -4,6 +4,7 @@ import About from './pages/about';
 import Home from './pages/home';
 import Footer from './components/footer';
 import Contact from './pages/contact';
+import Testing from './pages/testing';
 
 function Hero() {
   return (
@@ -14,6 +15,7 @@ function Hero() {
           <Route path="/personal-portfolio" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/personal-portfolio/testing" element={<Testing />} />
         </Routes>
       </div>
       <Footer className="footer" />
