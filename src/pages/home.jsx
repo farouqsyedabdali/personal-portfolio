@@ -72,8 +72,9 @@ const Home = () => {
 
   return (
     <>
+    <Testing /> 
       <div className={`hero min-h-screen bg-base-200 relative`}>
-        <div className="hero-content z-10 relative">
+        <div className="hero-content relative z-10">
           {" "}
           {/* Ensure content is above the background */}
           <div className="flex flex-col lg:flex-row">
@@ -135,9 +136,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Projects />
-      <About />
-      <Contact />
     </>
   );
 };

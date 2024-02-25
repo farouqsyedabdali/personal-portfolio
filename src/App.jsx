@@ -1,10 +1,11 @@
-import Navbar from './components/navbar';
-import { Route, Routes } from 'react-router-dom';
-import About from './pages/about';
-import Home from './pages/home';
-import Footer from './components/footer';
-import Contact from './pages/contact';
-import Testing from './pages/testing';
+import Navbar from "./components/navbar";
+import { Route, Routes } from "react-router-dom";
+import About from "./pages/about";
+import Home from "./pages/home";
+import Footer from "./components/footer";
+import Contact from "./pages/contact";
+import Testing from "./pages/testing";
+import Projects from "./pages/projects";
 
 function Hero() {
   return (
@@ -18,6 +19,9 @@ function Hero() {
           <Route path="/personal-portfolio/testing" element={<Testing />} />
         </Routes>
       </div>
+      <Projects />
+      <About />
+      <Contact />
       <Footer className="footer" />
     </div>
   );
