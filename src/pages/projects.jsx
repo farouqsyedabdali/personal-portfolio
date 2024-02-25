@@ -1,7 +1,10 @@
 import React from "react";
 import linkedinProfilePic from "../assets/linkedin profile pic.jpg";
+import softEng from "../assets/software-engineer.png";
 import Card from "../components/card";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Projects = () => {
   const [setRef, isVisible] = useIntersectionObserver({
@@ -9,6 +12,26 @@ const Projects = () => {
     rootMargin: "0px",
     threshold: 0.1,
   });
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <div className="bg-base-300 z-10" ref={setRef}>
@@ -24,28 +47,34 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Grid Container */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {/* Card 1 */}
+        {/* Carousel */}
+        <Carousel
+          responsive={responsive}
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+          className="h-[650px]"
+        >
           <Card
             title={"Full Stack Point of Sale (POS) System"}
-            description={"This is a test"}
+            description={"Testing description"}
             image={linkedinProfilePic}
-            link={"https://www.google.com/"}
+            link={"https://github.com/farouqsyedabdali/POS-system"}
           />
-          {/* Card 2 */}
-          <Card
-            image={
-              "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            }
+          <Card 
+            title={"React Chat App"}
+            description={"Testing description"}
+            image={softEng}
+            link={"https://www.youtube.com"}
           />
-          {/* Card 3 */}
           <Card />
-          {/* Card 4 */}
           <Card />
-          {/* Card 5 */}
           <Card />
-        </div>
+        </Carousel>
       </div>
     </div>
   );

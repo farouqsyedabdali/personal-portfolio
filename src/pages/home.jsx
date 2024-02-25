@@ -8,8 +8,11 @@ import About from "./about";
 import Contact from "./contact";
 import WaterDropGrid from "../components/waterDropGrid";
 import Testing from "./testing";
+import { color } from "framer-motion";
 
 const Home = () => {
+  const [hover, setHover] = useState(false);
+
   const [fadeInImage, setFadeInImage] = useState(false);
   const [fadeInH1, setFadeInH1] = useState(false);
   const [fadeInP, setFadeInP] = useState(false);
@@ -81,7 +84,7 @@ const Home = () => {
                     fadeInH1 ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  Hello there
+                  Hi, I'm <span style={{ color: "#7480FF" }}>Farouq</span>
                 </h1>
                 <p
                   className={`py-6 transition-opacity duration-1000 ${
@@ -132,7 +135,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
       <Projects />
       <About />
       <Contact />

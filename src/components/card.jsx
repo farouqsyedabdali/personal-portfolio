@@ -42,7 +42,7 @@ const Card = ({ title, description, image, link, alt }) => {
         className="pointer-events-none absolute inset-0"
         style={{
           opacity, // Controlled by state for smooth transition
-          background: `radial-gradient(circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.1), transparent 90%)`, // More subtle effect
+          background: `radial-gradient(circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.2), transparent 90%)`, // More subtle effect
           transition: 'opacity 0.3s ease',
         }}
       />
