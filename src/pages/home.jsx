@@ -9,6 +9,7 @@ import Contact from "./contact";
 import WaterDropGrid from "../components/waterDropGrid";
 import Testing from "./testing";
 import { color } from "framer-motion";
+import ReactParticles from "../components/reactParticles";
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -72,7 +73,8 @@ const Home = () => {
 
   return (
     <>
-    <Testing /> 
+    {/*<Testing /> */}
+    <ReactParticles />
       <div className={`hero min-h-screen bg-base-200 relative`}>
         <div className="hero-content relative z-10">
           {" "}

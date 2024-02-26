@@ -1,8 +1,16 @@
-import react from "@vitejs/plugin-react-swc";
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+
+import htmlIcon from "../assets/html-icon.svg";
+import cssIcon from "../assets/css-icon.svg";
+import cIcon from "../assets/c-icon.svg";
+import jsIcon from "../assets/js-icon.svg";
+import reactIcon from "../assets/react-icon.svg";
+import nodeIcon from "../assets/nodejs-icon.svg";
+import tsIcon from "../assets/ts-icon.svg";
+import mysqlIcon from "../assets/mysql-icon.svg";
 
 const ReactParticles = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -17,19 +25,17 @@ const ReactParticles = () => {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
-
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fullScreen: { enable: false },
-        background: {
-          color: {
-            value: "#0d47a1",
-          },
+        fullScreen: {
+          enable: true,
+          zIndex: 1,
         },
+        detectRetina: true,
         fpsLimit: 120,
         interactivity: {
           events: {
@@ -37,15 +43,47 @@ const ReactParticles = () => {
               enable: true,
               mode: "push",
             },
+            onDiv: {
+              elementId: "repulse-div",
+              enable: false,
+              mode: "repulse",
+            },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "bubble",
+              parallax: {
+                enable: false,
+                force: 60,
+                smooth: 10,
+              },
             },
             resize: true,
           },
           modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 2,
+            },
+            connect: {
+              distance: 80,
+              lineLinked: {
+                opacity: 0.5,
+              },
+              radius: 60,
+            },
+            grab: {
+              distance: 400,
+              lineLinked: {
+                opacity: 1,
+              },
+            },
             push: {
-              quantity: 4,
+              quantity: 2,
+            },
+            remove: {
+              quantity: 2,
             },
             repulse: {
               distance: 200,
@@ -57,21 +95,29 @@ const ReactParticles = () => {
           color: {
             value: "#ffffff",
           },
-          links: {
-            color: "#ffffff",
+          lineLinked: {
+            blink: false,
+            color: "#000",
+            consent: false,
             distance: 150,
-            enable: true,
-            opacity: 0.5,
+            enable: false,
+            opacity: 0.4,
             width: 1,
           },
           move: {
+            attract: {
+              enable: false,
+              rotate: {
+                x: 600,
+                y: 1200,
+              },
+            },
+            bounce: false,
             direction: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
+            outMode: "out",
             random: false,
-            speed: 6,
+            speed: 2,
             straight: false,
           },
           number: {
@@ -79,19 +125,117 @@ const ReactParticles = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            limit: 20,
+            value: 15,
           },
           opacity: {
-            value: 0.5,
+            animation: {
+              enable: true,
+              minimumValue: 0.2,
+              speed: 1,
+              sync: false,
+            },
+            random: true,
+            value: 1,
+          },
+          rotate: {
+            animation: {
+              enable: true,
+              speed: 5,
+              sync: false,
+            },
+            direction: "random",
+            random: true,
+            value: 0,
           },
           shape: {
-            type: "circle",
+            character: {
+              fill: false,
+              font: "Verdana",
+              style: "",
+              value: "*",
+              weight: "400",
+            },
+            image: [
+              {
+                src: cssIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: htmlIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: jsIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: cIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: nodeIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: reactIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: mysqlIcon,
+                width: 20,
+                height: 20,
+              },
+              {
+                src: tsIcon,
+                width: 20,
+                height: 20,
+              },
+            ],
+            polygon: {
+              sides: 5,
+            },
+            stroke: {
+              color: "#000000",
+              width: 0,
+            },
+            type: "image",
           },
           size: {
-            value: { min: 1, max: 5 },
+            animation: {
+              enable: false,
+              minimumValue: 0.1,
+              speed: 40,
+              sync: false,
+            },
+            random: false,
+            value: 16,
           },
         },
-        detectRetina: true,
+        polygon: {
+          draw: {
+            enable: false,
+            lineColor: "#ffffff",
+            lineWidth: 0.5,
+          },
+          move: {
+            radius: 10,
+          },
+          scale: 1,
+          url: "",
+        },
+        background: {
+          image: "",
+          position: "50% 50%",
+          repeat: "no-repeat",
+          size: "cover",
+        },
       }}
     />
   );
