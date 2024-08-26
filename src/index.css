@@ -9,7 +9,7 @@ body {
   transition: background-color 0.5s, color 0.5s;
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*

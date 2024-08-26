@@ -10,6 +10,7 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import CircleIcon from "../components/circleIcon";
 
 const About = () => {
   const [setRef, isVisible] = useIntersectionObserver({
@@ -22,11 +23,13 @@ const About = () => {
     <div className="bg-base-200 z-10">
       <div ref={setRef} className="max-w-4xl mx-auto px-4 py-12">
         <div
-          className={`text-center transition-opacity duration-10
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
+          className={`text-center transition-opacity duration-10 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <h1 className="text-4xl font-bold mb-6">About Me</h1>
+          <h1 className="text-6xl font-bold mb-6">
+            <span style={{ color: "oklch(var(--s))" }}>About</span> Me
+          </h1>
           <p className="text-lg text-gray-600 mb-8">
             Passionate about blending technology with creativity to solve
             complex challenges.
@@ -56,24 +59,12 @@ const About = () => {
               <FaCode className="mr-2" />
               My Skills
             </h2>
-            <ul className="list-none space-y-2">
-              <li className="flex items-center text-lg text-gray-600">
-                <FaJava className="text-orange-500 mr-2" size={32} />
-                Java - Backend development and algorithms
-              </li>
-              <li className="flex items-center text-lg text-gray-600">
-                <FaJsSquare className="text-yellow-500 mr-2" size={32} />
-                JavaScript - Frontend magic and interactive web applications
-              </li>
-              <li className="flex items-center text-lg text-gray-600">
-                <FaReact className="text-blue-500 mr-2" size={32} />
-                React - Seamless user interfaces and user experiences
-              </li>
-              <li className="flex items-center text-lg text-gray-600">
-                <FaNodeJs className="text-green-500 mr-2" size={32} />
-                Node.js - Scalable backend services and APIs
-              </li>
-            </ul>
+            <div className="flex justify-center space-x-4">
+              <CircleIcon icon={FaJava} />
+              <CircleIcon icon={FaJsSquare} />
+              <CircleIcon icon={FaReact} />
+              <CircleIcon icon={FaNodeJs} />
+            </div>
           </div>
         </div>
       </div>

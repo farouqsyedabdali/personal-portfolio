@@ -174,12 +174,12 @@ const ReactParticles = () => {
               },
               {
                 src: cIcon,
-                width: 20,
+                width: 18,
                 height: 20,
               },
               {
                 src: nodeIcon,
-                width: 20,
+                width: 18,
                 height: 20,
               },
               {

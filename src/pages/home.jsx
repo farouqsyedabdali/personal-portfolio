@@ -51,12 +51,7 @@ const Home = () => {
     };
   }, []);
 
-  document.addEventListener("mousemove", function (e) {
-    const x = e.clientX;
-    const y = e.clientY;
-    document.getElementById("spotlight").style.setProperty("--x", `${x}px`);
-    document.getElementById("spotlight").style.setProperty("--y", `${y}px`);
-  });
+
 
   const [text] = useTypewriter({
     words: [
@@ -75,7 +70,7 @@ const Home = () => {
     <>
     {/*<Testing /> */}
     <ReactParticles />
-      <div className={`hero min-h-screen bg-base-200 relative`}>
+      <div className={`hero min-h-screen relative`}>
         <div className="hero-content relative z-10">
           {" "}
           {/* Ensure content is above the background */}
@@ -83,21 +78,21 @@ const Home = () => {
             <div className="lg:w-1/2">
               <div className="max-w-md mx-auto">
                 <h1
-                  className={`text-5xl font-bold transition-opacity duration-1000 ${
+                  className={`text-8xl font-bold transition-opacity duration-1000 ${
                     fadeInH1 ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  Hi, I'm <span style={{ color: "#7480FF" }}>Farouq</span>
+                  Hi, I'm <span style={{ color: "oklch(var(--s))" }}>Farouq</span>
                 </h1>
                 <p
-                  className={`py-6 transition-opacity duration-1000 ${
+                  className={`py-6 transition-opacity duration-1000 text-3xl ${
                     fadeInP ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   I'm a Software Engineering Student at Carleton University
                 </p>
                 <button
-                  className={`btn btn-primary mr-3 transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 transition-all ease-in-out duration-500 m-auto ${
+                  className={`btn btn-neutral mr-3 transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 hover:btn-secondary transition-all ease-in-out duration-500 m-auto ${
                     fadeInButton ? "opacity-100" : "opacity-0"
                   }`}
                   onClick={() => scrollToElement("projects")}
@@ -105,7 +100,7 @@ const Home = () => {
                   View Projects
                 </button>
                 <button
-                  className={`btn btn-primary transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 transition-all ease-in-out duration-500 m-auto ${
+                  className={`btn btn-neutral transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 hover:btn-secondary transition-all ease-in-out duration-500 m-auto ${
                     fadeInButton2 ? "opacity-100" : "opacity-0"
                   }`}
                   onClick={openResume}

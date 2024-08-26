@@ -40,8 +40,8 @@ const Projects = () => {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div id="projects" className="text-center mb-12">
-          <h1 className="text-4xl font-bold">My Projects</h1>
+        <div id="projects" className="text-center">
+          <h1 className="text-6xl font-bold">My <span style={{ color: "oklch(var(--s))" }}>Projects</span></h1>
           <p className="text-lg text-gray-600 mt-4">
             Explore some of the projects I've worked on.
           </p>
@@ -57,23 +57,27 @@ const Projects = () => {
           infinite={true}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
-          className="h-[650px]"
+          className="py-10"
         >
           <Card
             title={"Full Stack Point of Sale (POS) System"}
-            description={"Testing description"}
+            description={"A full-stack POS system using React, Node.js/Express, and MySQL, with features for product management, transactions, and admin oversight."}
             image={linkedinProfilePic}
             link={"https://github.com/farouqsyedabdali/POS-system"}
           />
-          <Card 
+          <Card
             title={"React Chat App"}
             description={"Testing description"}
             image={softEng}
-            link={"https://www.youtube.com"}
+            link={"https://github.com/farouqsyedabdali/react-chat-app"}
           />
-          <Card />
-          <Card />
-          <Card />
+          <Card
+            title={"Sudoku Solver"}
+            description={"Insert description here"}
+          />
+          <Card 
+          title={"Text Based Facebook"}
+          description={"Insert Description here"}/>
         </Carousel>
       </div>
     </div>
