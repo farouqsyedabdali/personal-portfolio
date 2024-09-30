@@ -41,7 +41,9 @@ const Projects = () => {
         }`}
       >
         <div id="projects" className="text-center">
-          <h1 className="text-6xl font-bold">My <span style={{ color: "oklch(var(--s))" }}>Projects</span></h1>
+          <h1 className="text-6xl font-bold">
+            My <span style={{ color: "oklch(var(--s))" }}>Projects</span>
+          </h1>
           <p className="text-lg text-gray-600 mt-4">
             Explore some of the projects I've worked on.
           </p>
@@ -61,23 +63,36 @@ const Projects = () => {
         >
           <Card
             title={"Full Stack Point of Sale (POS) System"}
-            description={"A full-stack POS system using React, Node.js/Express, and MySQL, with features for product management, transactions, and admin oversight."}
+            description={
+              "A full-stack POS system using React, Node.js/Express, and MySQL, with features for product management, transactions, and admin oversight."
+            }
             image={linkedinProfilePic}
             link={"https://github.com/farouqsyedabdali/POS-system"}
           />
           <Card
             title={"React Chat App"}
-            description={"Testing description"}
+            description={
+              "A web-based chat application built using React and Firebase for user authentication and real-time messaging."
+            }
             image={softEng}
             link={"https://github.com/farouqsyedabdali/react-chat-app"}
           />
           <Card
-            title={"Sudoku Solver"}
-            description={"Insert description here"}
+            title={"Peer-to-Peer File Sharing System"}
+            description={"A Peer-to-Peer file sharing system built in Python."}
           />
-          <Card 
-          title={"Text Based Facebook"}
-          description={"Insert Description here"}/>
+          <Card
+            title={"Sudoku Solver"}
+            description={
+              "A Java-based GUI application where users enter a Sudoku puzzle and the program solves it using backtracking."
+            }
+          />
+          <Card
+            title={"Text Based Facebook"}
+            description={
+              "A text-based Facebook replica built in C where users can post, add or remove friends, and interact with others on the platform."
+            }
+          />
         </Carousel>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { FaBeer } from "react-icons/fa"; // Use a placeholder icon
 const CircleIconCard = ({
   icon: Icon = FaBeer,
   onClick,
-  widthClass = "w-16",
+  widthClass = "w-32",
   heightClass = "h-16",
   iconSizeClass = "text-3xl",
 }) => {
@@ -40,7 +40,7 @@ const CircleIconCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
-      className={`flex items-center justify-center rounded-full bg-base-100 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:bg-[oklch(var(--s))] hover:text-black transition duration-300 cursor-pointer ${widthClass} ${heightClass}`}
+      className={`flex items-center mb-2 justify-center rounded-full bg-base-100 shadow-xl border-solid border-2 border-[oklch(var(--s))] hover:shadow-2xl hover:bg-[oklch(var(--s))] hover:text-black transition duration-300 cursor-pointer ${widthClass} ${heightClass}`}
       style={{
         position: "relative",
         overflow: "hidden", // Ensure the spotlight effect does not overflow the card boundaries

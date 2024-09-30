@@ -10,6 +10,8 @@ import WaterDropGrid from "../components/waterDropGrid";
 import Testing from "./testing";
 import { color } from "framer-motion";
 import ReactParticles from "../components/reactParticles";
+import CanvasBackground from "../components/canvasBackground";
+
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -89,7 +91,7 @@ const Home = () => {
                     fadeInP ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  I'm a Software Engineering Student at Carleton University
+                  I'm a Computer Mathematics Student at Carleton University
                 </p>
                 <button
                   className={`btn btn-neutral mr-3 transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 hover:btn-secondary transition-all ease-in-out duration-500 m-auto ${
