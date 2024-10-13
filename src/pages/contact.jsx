@@ -1,27 +1,8 @@
 import React, { useState } from "react";
-import { MdEmail, MdPhone } from "react-icons/md"; // Icons for email and phone
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Icons for GitHub and LinkedIn
-import { color } from "framer-motion";
+import { MdEmail, MdPhone } from "react-icons/md";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import CircleIconCard from "../components/circleIcon";
-
-const LinkItem = ({ href, children }) => {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center text-lg transition-colors duration-300"
-      style={{ color: hover ? "oklch(var(--s))" : "currentColor" }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      {children}
-    </a>
-  );
-};
 
 const Contact = () => {
   const [setRef, isVisible] = useIntersectionObserver({
@@ -43,12 +24,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the form submission
     const mailtoLink = `mailto:farouqsyedabdali@gmail.com?subject=Website Email: from ${encodeURIComponent(
       formData.email
     )}&body=${encodeURIComponent(formData.message)}`;
-
-    // Open the mailto link in a new tab/window
     window.open(mailtoLink, "_blank");
   };
 
@@ -72,28 +50,48 @@ const Contact = () => {
           </div>
           <div className="w-1/2 space-y-4">
             <p>
-              <LinkItem href="mailto:farouqsyedabdali@gmail.com">
+              <a
+                href="mailto:farouqsyedabdali@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-lg hover:text-[oklch(var(--s))] duration-300"
+              >
                 <MdEmail className="mr-2" size={24} />
                 farouqsyedabdali@gmail.com
-              </LinkItem>
+              </a>
             </p>
             <p>
-              <LinkItem href="tel:+1-416-871-8834">
+              <a
+                href="tel:+1-416-871-8834"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-lg hover:text-[oklch(var(--s))] duration-300"
+              >
                 <MdPhone className="mr-2" size={24} />
                 +1 (416) 871-8834
-              </LinkItem>
+              </a>
             </p>
             <p>
-              <LinkItem href="https://github.com/farouqsyedabdali">
+              <a
+                href="https://github.com/farouqsyedabdali"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-lg hover:text-[oklch(var(--s))] duration-300"
+              >
                 <FaGithub className="mr-2" size={24} />
                 github.com/farouqsyedabdali
-              </LinkItem>
+              </a>
             </p>
             <p>
-              <LinkItem href="https://www.linkedin.com/in/farouq-syed-abdali/">
+              <a
+                href="https://www.linkedin.com/in/farouq-syed-abdali/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-lg hover:text-[oklch(var(--s))] duration-300"
+              >
                 <FaLinkedin className="mr-2" size={24} />
                 linkedin.com/in/farouq-syed-abdali
-              </LinkItem>
+              </a>
             </p>
           </div>
         </div>

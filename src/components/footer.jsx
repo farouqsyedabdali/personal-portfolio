@@ -1,7 +1,6 @@
 import React from "react";
 import { MdEmail, MdPhone } from "react-icons/md"; // Icons for email and phone
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Icons for GitHub and LinkedIn
-import LinkItem from "../pages/contact";
 
 const Footer = () => {
   return (

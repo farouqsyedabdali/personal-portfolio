@@ -40,7 +40,7 @@ const CircleIconCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
-      className={`flex items-center mb-2 justify-center rounded-full bg-base-100 shadow-xl border-solid border-2 border-[oklch(var(--s))] hover:shadow-2xl hover:bg-[oklch(var(--s))] hover:text-black transition duration-300 cursor-pointer ${widthClass} ${heightClass}`}
+      className={`flex items-center mb-2 justify-center rounded-full bg-base-100 shadow-xl border-solid border-2 border-[oklch(var(--s))] hover:shadow-2xl transition duration-300 cursor-pointer ${widthClass} ${heightClass}`}
       style={{
         position: "relative",
         overflow: "hidden", // Ensure the spotlight effect does not overflow the card boundaries
@@ -49,11 +49,6 @@ const CircleIconCard = ({
     >
       <div
         className="pointer-events-none absolute inset-0"
-        style={{
-          opacity, // Controlled by state for smooth transition
-          background: `radial-gradient(circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.2), transparent 90%)`, // More subtle effect
-          transition: "opacity 0.3s ease",
-        }}
       />
       <Icon className={iconSizeClass} />
     </div>

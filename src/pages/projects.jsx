@@ -5,6 +5,11 @@ import Card from "../components/card";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import textBasedFacebook from "../assets/text-based-facebook.png";
+import p2p from "../assets/p2p.png";
+import pos from "../assets/pos.png";
+import reactChatApp from "../assets/react-chat-app.png";
+import sudoku from "../assets/sudoku.png"
 
 const Projects = () => {
   const [setRef, isVisible] = useIntersectionObserver({
@@ -49,24 +54,29 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Carousel */}
+        
         <Carousel
           responsive={responsive}
           swipeable={false}
           draggable={false}
           showDots={true}
-          ssr={true} // means to render carousel on server-side.
+          ssr={true}
           infinite={true}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
           className="py-10"
         >
           <Card
+            title={"Peer-to-Peer File Sharing System"}
+            description={"A Peer-to-Peer file sharing system built in Python, allowing users to share files in chunks over a network."}
+            image={p2p}
+          />
+          <Card
             title={"Full Stack Point of Sale (POS) System"}
             description={
               "A full-stack POS system using React, Node.js/Express, and MySQL, with features for product management, transactions, and admin oversight."
             }
-            image={linkedinProfilePic}
+            image={pos}
             link={"https://github.com/farouqsyedabdali/POS-system"}
           />
           <Card
@@ -74,24 +84,22 @@ const Projects = () => {
             description={
               "A web-based chat application built using React and Firebase for user authentication and real-time messaging."
             }
-            image={softEng}
+            image={reactChatApp}
             link={"https://github.com/farouqsyedabdali/react-chat-app"}
-          />
-          <Card
-            title={"Peer-to-Peer File Sharing System"}
-            description={"A Peer-to-Peer file sharing system built in Python."}
           />
           <Card
             title={"Sudoku Solver"}
             description={
               "A Java-based GUI application where users enter a Sudoku puzzle and the program solves it using backtracking."
             }
+            image={sudoku}
           />
           <Card
             title={"Text Based Facebook"}
             description={
               "A text-based Facebook replica built in C where users can post, add or remove friends, and interact with others on the platform."
             }
+            image={textBasedFacebook}
           />
         </Carousel>
       </div>
