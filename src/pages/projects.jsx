@@ -70,6 +70,7 @@ const Projects = () => {
             title={"Peer-to-Peer File Sharing System"}
             description={"A Peer-to-Peer file sharing system built in Python, allowing users to share files in chunks over a network."}
             image={p2p}
+            link={"https://github.com/farouqsyedabdali/p2p-file-sharing-system"}
           />
           <Card
             title={"Full Stack Point of Sale (POS) System"}
@@ -93,6 +94,7 @@ const Projects = () => {
               "A Java-based GUI application where users enter a Sudoku puzzle and the program solves it using backtracking."
             }
             image={sudoku}
+            link={"https://github.com/farouqsyedabdali/sudoku-solver"}
           />
           <Card
             title={"Text Based Facebook"}
@@ -100,6 +102,7 @@ const Projects = () => {
               "A text-based Facebook replica built in C where users can post, add or remove friends, and interact with others on the platform."
             }
             image={textBasedFacebook}
+            link={"https://github.com/farouqsyedabdali/text-based-facebook"}
           />
         </Carousel>
       </div>

@@ -13,7 +13,7 @@ function Hero() {
       <Navbar />
       <div className="flex-grow">
         <Routes>
-          <Route path="/personal-portfolio" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/personal-portfolio/testing" element={<Testing />} />
