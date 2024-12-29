@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-const Card = ({ title, description, image, link, alt }) => {
+const Card = ({ title, description, image, link, alt, onlyGithub, demoLink }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
   const cardRef = useRef(null);
@@ -53,8 +53,13 @@ const Card = ({ title, description, image, link, alt }) => {
         <h2 className="card-title text-2xl font-bold" style={{ color: "oklch(var(--s))" }}>{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
+          {!onlyGithub && (
+            <a href={demoLink} target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-neutral hover:btn-secondary">View Demo</button>
+            </a>
+          )}
           <a href={link} target="_blank" rel="noopener noreferrer">
-            <button className="btn btn-neutral hover:btn-secondary">View Project</button>
+            <button className="btn btn-neutral hover:btn-secondary">View Github</button>
           </a>
         </div>
       </div>

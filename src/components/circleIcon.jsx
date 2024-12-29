@@ -22,15 +22,15 @@ const CircleIconCard = ({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
-    setOpacity(0.2); // Reduced spotlight visibility
+    setOpacity(0.2);
   };
 
   const handleMouseEnter = () => {
-    setOpacity(0.2); // Reduced spotlight visibility on mouse enter
+    setOpacity(0.2);
   };
 
   const handleMouseLeave = () => {
-    setOpacity(0); // Hide spotlight on mouse leave
+    setOpacity(0);
   };
 
   return (
@@ -40,11 +40,11 @@ const CircleIconCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
-      className={`flex items-center mb-2 justify-center rounded-full bg-base-100 shadow-xl border-solid border-2 border-[oklch(var(--s))] hover:shadow-2xl transition duration-300 cursor-pointer ${widthClass} ${heightClass}`}
+      className={`flex items-center mb-2 justify-center rounded-full bg-base-100 shadow-xl border-solid border-2 border-[oklch(var(--s))] hover:shadow-2xl transition duration-300 ${widthClass} ${heightClass}`}
       style={{
         position: "relative",
-        overflow: "hidden", // Ensure the spotlight effect does not overflow the card boundaries
-        lineHeight: 0, // Center icon vertically
+        overflow: "hidden",
+        lineHeight: 0,
       }}
     >
       <div

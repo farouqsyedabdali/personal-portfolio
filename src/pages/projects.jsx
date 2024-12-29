@@ -10,6 +10,7 @@ import p2p from "../assets/p2p.png";
 import pos from "../assets/pos.png";
 import reactChatApp from "../assets/react-chat-app.png";
 import sudoku from "../assets/sudoku.png"
+import customoji from "../assets/customoji.png";
 
 const Projects = () => {
   const [setRef, isVisible] = useIntersectionObserver({
@@ -67,26 +68,36 @@ const Projects = () => {
           className="py-10"
         >
           <Card
-            title={"Peer-to-Peer File Sharing System"}
+            title={"Customoji"}
+            description={"A custom emoji creator built using Vue.js, allowing users to create and share custom emojis using a variety of assets."}
+            image={customoji}
+            link={"https://github.com/farouqsyedabdali/custom-emoji-creator"}
+            demoLink={"https://farouqsyedabdali.github.io/custom-emoji-creator/"}
+          />
+          <Card
+            title={"SwiftShare"}
             description={"A Peer-to-Peer file sharing system built in Python, allowing users to share files in chunks over a network."}
             image={p2p}
             link={"https://github.com/farouqsyedabdali/p2p-file-sharing-system"}
+            onlyGithub={true}
           />
           <Card
-            title={"Full Stack Point of Sale (POS) System"}
+            title={"RetailVerse"}
             description={
               "A full-stack POS system using React, Node.js/Express, and MySQL, with features for product management, transactions, and admin oversight."
             }
             image={pos}
             link={"https://github.com/farouqsyedabdali/POS-system"}
+            onlyGithub={true}
           />
           <Card
-            title={"React Chat App"}
+            title={"ChatterBox"}
             description={
               "A web-based chat application built using React and Firebase for user authentication and real-time messaging."
             }
             image={reactChatApp}
             link={"https://github.com/farouqsyedabdali/react-chat-app"}
+            onlyGithub={true}
           />
           <Card
             title={"Sudoku Solver"}
@@ -95,6 +106,7 @@ const Projects = () => {
             }
             image={sudoku}
             link={"https://github.com/farouqsyedabdali/sudoku-solver"}
+            onlyGithub={true}
           />
           <Card
             title={"Text Based Facebook"}
@@ -103,6 +115,7 @@ const Projects = () => {
             }
             image={textBasedFacebook}
             link={"https://github.com/farouqsyedabdali/text-based-facebook"}
+            onlyGithub={true}
           />
         </Carousel>
       </div>

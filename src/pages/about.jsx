@@ -57,7 +57,7 @@ const About = () => {
               <span className="font-bold text-[oklch(var(--s))]">
                 {" "}
                 Currently, I'm seeking Software Engineering Internship roles for
-                Winter and Summer 2025
+                Summer 2025
               </span>
             </p>
           </div>
