@@ -50,14 +50,15 @@ const About = () => {
             <p className="text-lg text-base-content">
               In an effort to relieve my boredom in the heart of a pandemic, I
               stumbled across a Python tutorial on YouTube. Unbeknownst to me,
-              this would be the most pivotal moment of my life. Today, I'm
+              this would be the most pivotal moment of my life. Today, I'm a
+              Software Engineer Intern at an dQuant Capital Management and
               studying Computer Mathematics at Carleton University. I'm working
               on building projects I'm passionate about, such as a Full Stack
               POS System and exploring different emerging technologies.
               <span className="font-bold text-[oklch(var(--s))]">
                 {" "}
                 Currently, I'm seeking Software Engineering Internship roles for
-                Summer 2025
+                Fall 2025
               </span>
             </p>
           </div>

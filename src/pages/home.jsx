@@ -94,7 +94,7 @@ const Home = () => {
                   I'm a Computer Mathematics Student at Carleton University
                 </p>
                 <button
-                  className={`btn btn-neutral mr-3 transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 hover:btn-secondary transition-all ease-in-out duration-500 m-auto ${
+                  className={`btn btn-neutral mr-3 transition-opacity duration-1000 hover:btn-secondary ${
                     fadeInButton ? "opacity-100" : "opacity-0"
                   }`}
                   onClick={() => scrollToElement("projects")}
@@ -102,7 +102,7 @@ const Home = () => {
                   View Projects
                 </button>
                 <button
-                  className={`btn btn-neutral transition-opacity duration-1000 hover:shadow-2xl transform hover:scale-105 hover:btn-secondary transition-all ease-in-out duration-500 m-auto ${
+                  className={`btn btn-neutral transition-opacity duration-1000 hover:btn-secondary ${
                     fadeInButton2 ? "opacity-100" : "opacity-0"
                   }`}
                   onClick={openResume}

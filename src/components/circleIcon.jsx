@@ -49,6 +49,11 @@ const CircleIconCard = ({
     >
       <div
         className="pointer-events-none absolute inset-0"
+        // style={{
+        //   background: `linear-gradient(to right, transparent 50%, oklch(var(--s)) 100%)`,
+        //   opacity: opacity,
+        //   transition: "opacity 0.3s",
+        // }}
       />
       <Icon className={iconSizeClass} />
     </div>

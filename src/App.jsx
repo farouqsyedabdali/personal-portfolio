@@ -6,23 +6,17 @@ import Footer from "./components/footer";
 import Contact from "./pages/contact";
 import Testing from "./pages/testing";
 import Projects from "./pages/projects";
+import Experience from "./pages/experience";
 
 function Hero() {
   return (
     <div className="flex flex-col min-h-screen bg-base-200">
-      <Navbar />
-      <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/personal-portfolio/testing" element={<Testing />} />
-        </Routes>
-      </div>
+      <Navbar/>
+      <Home />
       <Projects />
       <About />
       <Contact />
-      <Footer className="footer" />
+      <Footer />
     </div>
   );
 }

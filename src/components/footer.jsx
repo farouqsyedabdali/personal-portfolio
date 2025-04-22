@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container pt-4">
         <div className="pb-4 flex justify-center text-lg">
           <p>
-            © 2024 | Built by{" "}
+            © 2025 | Built by{" "}
             <span className="font-bold text-[oklch(var(--s))]">Farouq</span>
           </p>
         </div>
